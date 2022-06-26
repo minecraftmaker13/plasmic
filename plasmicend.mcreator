@@ -13,7 +13,8 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "block.plasmic.nova_plant": "Nova Plant"
+      "block.plasmic.nova_plant": "Nova Plant",
+      "block.plasmicend.nova_plant": "Nova Plant"
     }
   },
   "foldersRoot": {
@@ -21,8 +22,8 @@
     "children": []
   },
   "workspaceSettings": {
-    "modid": "plasmic",
-    "modName": "Plasmic",
+    "modid": "plasmicend",
+    "modName": "Plasmic End",
     "version": "1.0.0",
     "author": "dooli, MCreator",
     "websiteURL": "https://mcreator.net",
@@ -34,7 +35,8 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.18.2",
-    "modElementsPackage": "net.mcreator.plasmic",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.plasmicend",
     "lockBaseModFiles": false
   },
   "mcreatorVersion": 202200120510

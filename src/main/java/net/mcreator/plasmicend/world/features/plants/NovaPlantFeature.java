@@ -1,5 +1,5 @@
 
-package net.mcreator.plasmic.world.features.plants;
+package net.mcreator.plasmicend.world.features.plants;
 
 import net.minecraft.world.level.levelgen.placement.RarityFilter;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
@@ -24,7 +24,7 @@ import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.core.Holder;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.plasmic.init.PlasmicModBlocks;
+import net.mcreator.plasmicend.init.PlasmicendModBlocks;
 
 import java.util.Set;
 import java.util.List;
@@ -36,14 +36,14 @@ public class NovaPlantFeature extends RandomPatchFeature {
 
 	public static Feature<?> feature() {
 		FEATURE = new NovaPlantFeature();
-		CONFIGURED_FEATURE = FeatureUtils.register("plasmic:nova_plant", FEATURE,
+		CONFIGURED_FEATURE = FeatureUtils.register("plasmicend:nova_plant", FEATURE,
 				FeatureUtils.simpleRandomPatchConfiguration(64,
 						PlacementUtils.filtered(Feature.BLOCK_COLUMN,
 								BlockColumnConfiguration.simple(BiasedToBottomInt.of(2, 4),
-										BlockStateProvider.simple(PlasmicModBlocks.NOVA_PLANT.get().defaultBlockState())),
+										BlockStateProvider.simple(PlasmicendModBlocks.NOVA_PLANT.get().defaultBlockState())),
 								BlockPredicate.allOf(BlockPredicate.ONLY_IN_AIR_PREDICATE,
-										BlockPredicate.wouldSurvive(PlasmicModBlocks.NOVA_PLANT.get().defaultBlockState(), BlockPos.ZERO)))));
-		PLACED_FEATURE = PlacementUtils.register("plasmic:nova_plant", CONFIGURED_FEATURE, List.of(CountPlacement.of(5),
+										BlockPredicate.wouldSurvive(PlasmicendModBlocks.NOVA_PLANT.get().defaultBlockState(), BlockPos.ZERO)))));
+		PLACED_FEATURE = PlacementUtils.register("plasmicend:nova_plant", CONFIGURED_FEATURE, List.of(CountPlacement.of(5),
 				RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
 		return FEATURE;
 	}

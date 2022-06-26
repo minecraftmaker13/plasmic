@@ -1,5 +1,5 @@
 
-package net.mcreator.plasmic.block;
+package net.mcreator.plasmicend.block;
 
 import net.minecraftforge.common.PlantType;
 import net.minecraftforge.common.ForgeHooks;
@@ -22,7 +22,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
-import net.mcreator.plasmic.init.PlasmicModBlocks;
+import net.mcreator.plasmicend.init.PlasmicendModBlocks;
 
 import java.util.Random;
 import java.util.List;
@@ -85,6 +85,6 @@ public class NovaPlantBlock extends SugarCaneBlock {
 
 	@OnlyIn(Dist.CLIENT)
 	public static void registerRenderLayer() {
-		ItemBlockRenderTypes.setRenderLayer(PlasmicModBlocks.NOVA_PLANT.get(), renderType -> renderType == RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(PlasmicendModBlocks.NOVA_PLANT.get(), renderType -> renderType == RenderType.cutout());
 	}
 }

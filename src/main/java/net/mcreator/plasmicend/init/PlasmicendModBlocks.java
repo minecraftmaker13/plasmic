@@ -2,7 +2,7 @@
 /*
  *    MCreator note: This file will be REGENERATED on each build.
  */
-package net.mcreator.plasmic.init;
+package net.mcreator.plasmicend.init;
 
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -14,11 +14,11 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.block.Block;
 
-import net.mcreator.plasmic.block.NovaPlantBlock;
-import net.mcreator.plasmic.PlasmicMod;
+import net.mcreator.plasmicend.block.NovaPlantBlock;
+import net.mcreator.plasmicend.PlasmicendMod;
 
-public class PlasmicModBlocks {
-	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, PlasmicMod.MODID);
+public class PlasmicendModBlocks {
+	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, PlasmicendMod.MODID);
 	public static final RegistryObject<Block> NOVA_PLANT = REGISTRY.register("nova_plant", () -> new NovaPlantBlock());
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)

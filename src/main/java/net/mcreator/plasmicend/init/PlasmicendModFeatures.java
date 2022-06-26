@@ -2,7 +2,7 @@
 /*
  *    MCreator note: This file will be REGENERATED on each build.
  */
-package net.mcreator.plasmic.init;
+package net.mcreator.plasmicend.init;
 
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -17,8 +17,8 @@ import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.Holder;
 
-import net.mcreator.plasmic.world.features.plants.NovaPlantFeature;
-import net.mcreator.plasmic.PlasmicMod;
+import net.mcreator.plasmicend.world.features.plants.NovaPlantFeature;
+import net.mcreator.plasmicend.PlasmicendMod;
 
 import java.util.function.Supplier;
 import java.util.Set;
@@ -26,8 +26,8 @@ import java.util.List;
 import java.util.ArrayList;
 
 @Mod.EventBusSubscriber
-public class PlasmicModFeatures {
-	public static final DeferredRegister<Feature<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.FEATURES, PlasmicMod.MODID);
+public class PlasmicendModFeatures {
+	public static final DeferredRegister<Feature<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.FEATURES, PlasmicendMod.MODID);
 	private static final List<FeatureRegistration> FEATURE_REGISTRATIONS = new ArrayList<>();
 	public static final RegistryObject<Feature<?>> NOVA_PLANT = register("nova_plant", NovaPlantFeature::feature,
 			new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION, NovaPlantFeature.GENERATE_BIOMES, NovaPlantFeature::placedFeature));

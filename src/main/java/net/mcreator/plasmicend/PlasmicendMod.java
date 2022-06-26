@@ -11,7 +11,7 @@
  *    will be REGENERATED on each build.
  *
  */
-package net.mcreator.plasmic;
+package net.mcreator.plasmicend;
 
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
@@ -26,30 +26,30 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
-import net.mcreator.plasmic.init.PlasmicModItems;
-import net.mcreator.plasmic.init.PlasmicModFeatures;
-import net.mcreator.plasmic.init.PlasmicModBlocks;
+import net.mcreator.plasmicend.init.PlasmicendModItems;
+import net.mcreator.plasmicend.init.PlasmicendModFeatures;
+import net.mcreator.plasmicend.init.PlasmicendModBlocks;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
 import java.util.function.BiConsumer;
 
-@Mod("plasmic")
-public class PlasmicMod {
-	public static final Logger LOGGER = LogManager.getLogger(PlasmicMod.class);
-	public static final String MODID = "plasmic";
+@Mod("plasmicend")
+public class PlasmicendMod {
+	public static final Logger LOGGER = LogManager.getLogger(PlasmicendMod.class);
+	public static final String MODID = "plasmicend";
 	private static final String PROTOCOL_VERSION = "1";
 	public static final SimpleChannel PACKET_HANDLER = NetworkRegistry.newSimpleChannel(new ResourceLocation(MODID, MODID), () -> PROTOCOL_VERSION,
 			PROTOCOL_VERSION::equals, PROTOCOL_VERSION::equals);
 	private static int messageID = 0;
 
-	public PlasmicMod() {
+	public PlasmicendMod() {
 
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-		PlasmicModBlocks.REGISTRY.register(bus);
-		PlasmicModItems.REGISTRY.register(bus);
+		PlasmicendModBlocks.REGISTRY.register(bus);
+		PlasmicendModItems.REGISTRY.register(bus);
 
-		PlasmicModFeatures.REGISTRY.register(bus);
+		PlasmicendModFeatures.REGISTRY.register(bus);
 
 	}
 

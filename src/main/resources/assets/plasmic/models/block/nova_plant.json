@@ -1,7 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "plasmic:blocks/a",
-    "particle": "plasmic:blocks/a"
-  }
-}
